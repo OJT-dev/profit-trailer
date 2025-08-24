@@ -1,0 +1,59 @@
+# ProfitTrailer Main Configuration Example
+# Copy this file to application.properties and customize
+
+# Exchange settings
+trading.exchange = BINANCE
+trading.apiKey = YOUR_API_KEY_HERE
+trading.apiSecret = YOUR_API_SECRET_HERE
+
+# Market to trade in (BTC, ETH, USDT, BNB)
+trading.market = BTC
+
+# Web interface settings
+server.port = 8081
+server.bind_address = localhost
+
+# Enable/disable trading
+trading.enabled = true
+
+# Risk management
+trading.maxConcurrentTrades = 5
+trading.maxExposure = 0.5
+
+# Base currency settings
+trading.baseCurrency = BTC
+
+# Update intervals (milliseconds)
+trading.updateInterval = 30000
+trading.priceUpdateInterval = 10000
+
+# Paper trading mode (set to true for testing)
+trading.testMode = false
+
+# Logging level (DEBUG, INFO, WARN, ERROR)
+logging.level = INFO
+
+# Database settings (usually don't need to change)
+spring.datasource.url = jdbc:sqlite:data/profittrailer.db
+
+# Security settings
+security.enabled = false
+# Uncomment below for password protection
+# security.username = admin  
+# security.password = your_secure_password
+
+# Telegram bot settings (optional)
+# telegram.enabled = false
+# telegram.botToken = YOUR_BOT_TOKEN
+# telegram.chatId = YOUR_CHAT_ID
+
+# Email notifications (optional)
+# mail.enabled = false
+# mail.smtp.host = smtp.gmail.com
+# mail.smtp.port = 587
+# mail.smtp.username = your_email@gmail.com
+# mail.smtp.password = your_app_password
+
+# Advanced settings (usually don't need to change)
+trading.minimumOrderbookEntries = 10
+trading.orderTimeout = 60000
